@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Presença - Grupo Efatá</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
+    <h2>✅ Registro de Presença – Grupo Efatá</h2>
+    <p>Digite seu e-mail cadastrado para confirmar sua presença e ganhar pontos!</p>
+    <input type="email" id="email" placeholder="exemplo@email.com" style="padding: 10px; width: 250px; font-size: 16px;">
+    <br><br>
+    <button onclick="registrarPresenca()" style="padding: 10px 20px; font-size: 16px;">Registrar Presença</button>
+
+    <script>
+        function registrarPresenca() {
+            const email = document.getElementById("email").value.trim();
+            if (!email) {
+                alert("Por favor, digite seu e-mail.");
+                return;
+            }
+            const url = "https://script.google.com/macros/s/AKfycbzA8x_KriiI0e87K5oaxFq1lzvLIK4YLBvV8HsZPNW6Pio2h-TduR-J13W0nAOXHYY0/exec?email=" + encodeURIComponent(email);
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
